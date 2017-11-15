@@ -9,8 +9,8 @@
                     var link = document.createElement("link");
                     link.href = "dlink1.css";
                     link.rel = "stylesheet";
-                    document.head.appendChild(link);
                     link.disabled = true;
+                    document.head.appendChild(link);
                     setTimeout(function() {
                         document.getElementById("container").textContent = "Amount of stylesheets: " + document.styleSheets.length;
                     }, 100);

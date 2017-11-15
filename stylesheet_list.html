@@ -5,11 +5,12 @@
 
     <body>
         <body>
+            <div id="container"></div>
             <script>
                 var link = document.getElementsByTagName("link")[0];
                 link.disabled = true;
                 setTimeout(function() {
-                    document.body.textContent = "Amount of stylesheets: " + document.styleSheets.length;
+                    document.getElementById("container").textContent = "Amount of stylesheets: " + document.styleSheets.length;
                 }, 100);
             </script>
         </body>
