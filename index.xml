@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes</title>
+    <link>https://yauhen.space/</link>
+    <description>Recent content on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to monitor amount of data transferred over a specific port</title>
+      <link>https://yauhen.space/posts/how-to-monitor-amount-of-data-transferred-over-a-specific-port/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/how-to-monitor-amount-of-data-transferred-over-a-specific-port/</guid>
+      <description>sudo iftop -i lo -f “port 8015”</description>
+    </item>
+    
+    <item>
+      <title>Django-like testrunner for python projects</title>
+      <link>https://yauhen.space/posts/python_testrunner/</link>
+      <pubDate>Sun, 11 Mar 2018 22:22:44 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/python_testrunner/</guid>
+      <description>#!/usr/bin/env python import argparse import collections import unittest import sys def main(): parser = argparse.ArgumentParser(description=&amp;#39;Django-like testrunner&amp;#39;) parser.add_argument(&amp;#39;specific_test&amp;#39;, metavar=&amp;#39;&amp;#39;, type=str, nargs=&amp;#39;?&amp;#39;, help=&amp;#39;Specifc test&amp;#39;) parser.add_argument(&amp;#34;--failfast&amp;#34;, action=&amp;#34;store_true&amp;#34;) parser.add_argument(&amp;#34;--verbosity&amp;#34;, type=int, default=1) args = parser.parse_args() loader = unittest.TestLoader() all_tests = loader.discover(&amp;#39;.&amp;#39;, top_level_dir=&amp;#34;./&amp;#34;) suite = unittest.TestSuite() if args.specific_test: def walk_tests(tests): if isinstance(tests, collections.Iterable): for item in tests: walk_tests(item) return if tests.id().startswith(args.specific_test): suite.addTest(tests) elif not str(tests).startswith(&amp;#34;test&amp;#34;): sys.exit(&amp;#34;Error in file %s&amp;#34; % tests) walk_tests(all_tests) else: suite.addTests(all_tests) result = unittest.</description>
+    </item>
+    
+    <item>
+      <title>What command hides behind alias?</title>
+      <link>https://yauhen.space/posts/what_alias/</link>
+      <pubDate>Sun, 11 Mar 2018 22:11:56 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/what_alias/</guid>
+      <description>To check what command is assigned to the alias use type command:
+$ type gl gl is aliased to `git log --oneline&amp;#39;</description>
+    </item>
+    
+    <item>
+      <title>CPU benchmark</title>
+      <link>https://yauhen.space/posts/cpu_benchmark/</link>
+      <pubDate>Sun, 11 Mar 2018 22:08:31 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/cpu_benchmark/</guid>
+      <description>CPU benchmark from Dell Precision 15 5510 Core-i5 i5-6440HQ
+$ sysbench cpu run --time=5 sysbench 1.0.9 (using system LuaJIT 2.1.0-beta3) Running the test with following options: Number of threads: 1 Initializing random number generator from current time Prime numbers limit: 10000 Initializing worker threads... Threads started! CPU speed: events per second: 1157.88 General statistics: total time: 5.0008s total number of events: 5792 Latency (ms): min: 0.80 avg: 0.86 max: 3.74 95th percentile: 1.</description>
+    </item>
+    
+    <item>
+      <title>GUI to preview SSL certificates</title>
+      <link>https://yauhen.space/posts/gcr_viewer/</link>
+      <pubDate>Sun, 11 Mar 2018 22:06:26 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/gcr_viewer/</guid>
+      <description>gcr-viewer cert.</description>
+    </item>
+    
+    <item>
+      <title>List all IP addresses in a network</title>
+      <link>https://yauhen.space/posts/ip_network/</link>
+      <pubDate>Sun, 11 Mar 2018 22:05:36 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/ip_network/</guid>
+      <description>To list ip addresses of all connected to the network devices, use this command:
+nmap -sn 192.</description>
+    </item>
+    
+    <item>
+      <title>Install flashplayer in Firefox</title>
+      <link>https://yauhen.space/posts/install_flashplayer/</link>
+      <pubDate>Thu, 16 Nov 2017 22:13:24 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/install_flashplayer/</guid>
+      <description>I have flashplayer installed on my system from the official Adobe repository, but Firefox for some reason does not have flash plugin installed. You can check if your browser supports flash by navigating to this url
+To make Firefox aware of flashplugin, try to create a symlink here:
+cd http://isflashinstalled.com/ &amp;amp;&amp;amp; ln -s /usr/lib64/flash-plugin/libflashplayer.so .</description>
+    </item>
+    
+    <item>
+      <title>Monitor process with top</title>
+      <link>https://yauhen.space/posts/monitor_top/</link>
+      <pubDate>Thu, 02 Nov 2017 22:14:59 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/monitor_top/</guid>
+      <description>One liner to monitor a process with the name /wshub:
+top -p &amp;#34;$(pgrep -f /wshub)&amp;#34;</description>
+    </item>
+    
+    <item>
+      <title>Run command as a different user</title>
+      <link>https://yauhen.space/posts/run_command/</link>
+      <pubDate>Tue, 31 Oct 2017 22:16:07 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/run_command/</guid>
+      <description>Command runuser allows to run a command as a different user. You must be root to be able to run that command:
+sudo runuser -l vagrant -c &amp;#34;GH=1 env&amp;#34;</description>
+    </item>
+    
+    <item>
+      <title>Monitor cpu and memory usage of the process</title>
+      <link>https://yauhen.space/posts/periodically_monitor/</link>
+      <pubDate>Fri, 13 Oct 2017 22:17:20 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/periodically_monitor/</guid>
+      <description>Print every second cpu and memory usage of the process:
+watch -n 1 &amp;#34;ps -eo pid,pcpu,pmem,args | kazy -i xnotitle -e kazy&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>

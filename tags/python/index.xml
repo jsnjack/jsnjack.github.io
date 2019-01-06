@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Notes</title>
+    <link>https://yauhen.space/tags/python/</link>
+    <description>Recent content in Python on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 22:22:44 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django-like testrunner for python projects</title>
+      <link>https://yauhen.space/posts/python_testrunner/</link>
+      <pubDate>Sun, 11 Mar 2018 22:22:44 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/python_testrunner/</guid>
+      <description>#!/usr/bin/env python import argparse import collections import unittest import sys def main(): parser = argparse.ArgumentParser(description=&amp;#39;Django-like testrunner&amp;#39;) parser.add_argument(&amp;#39;specific_test&amp;#39;, metavar=&amp;#39;&amp;#39;, type=str, nargs=&amp;#39;?&amp;#39;, help=&amp;#39;Specifc test&amp;#39;) parser.add_argument(&amp;#34;--failfast&amp;#34;, action=&amp;#34;store_true&amp;#34;) parser.add_argument(&amp;#34;--verbosity&amp;#34;, type=int, default=1) args = parser.parse_args() loader = unittest.TestLoader() all_tests = loader.discover(&amp;#39;.&amp;#39;, top_level_dir=&amp;#34;./&amp;#34;) suite = unittest.TestSuite() if args.specific_test: def walk_tests(tests): if isinstance(tests, collections.Iterable): for item in tests: walk_tests(item) return if tests.id().startswith(args.specific_test): suite.addTest(tests) elif not str(tests).startswith(&amp;#34;test&amp;#34;): sys.exit(&amp;#34;Error in file %s&amp;#34; % tests) walk_tests(all_tests) else: suite.addTests(all_tests) result = unittest.</description>
+    </item>
+    
+  </channel>
+</rss>

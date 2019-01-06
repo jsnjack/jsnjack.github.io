@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Notes</title>
+    <link>https://yauhen.space/tags/</link>
+    <description>Recent content in Tags on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 22:11:56 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>https://yauhen.space/tags/bash/</link>
+      <pubDate>Sun, 11 Mar 2018 22:11:56 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmark</title>
+      <link>https://yauhen.space/tags/benchmark/</link>
+      <pubDate>Sun, 11 Mar 2018 22:08:31 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cpu</title>
+      <link>https://yauhen.space/tags/cpu/</link>
+      <pubDate>Sun, 11 Mar 2018 22:08:31 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/cpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>https://yauhen.space/tags/django/</link>
+      <pubDate>Sun, 11 Mar 2018 22:22:44 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fedora</title>
+      <link>https://yauhen.space/tags/fedora/</link>
+      <pubDate>Thu, 16 Nov 2017 22:13:24 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/fedora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firefox</title>
+      <link>https://yauhen.space/tags/firefox/</link>
+      <pubDate>Thu, 16 Nov 2017 22:13:24 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flashplayer</title>
+      <link>https://yauhen.space/tags/flashplayer/</link>
+      <pubDate>Thu, 16 Nov 2017 22:13:24 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/flashplayer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://yauhen.space/tags/linux/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitor</title>
+      <link>https://yauhen.space/tags/monitor/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>https://yauhen.space/tags/network/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nmap</title>
+      <link>https://yauhen.space/tags/nmap/</link>
+      <pubDate>Sun, 11 Mar 2018 22:05:36 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/nmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://yauhen.space/tags/python/</link>
+      <pubDate>Sun, 11 Mar 2018 22:22:44 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssl</title>
+      <link>https://yauhen.space/tags/ssl/</link>
+      <pubDate>Sun, 11 Mar 2018 22:06:26 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sysbench</title>
+      <link>https://yauhen.space/tags/sysbench/</link>
+      <pubDate>Sun, 11 Mar 2018 22:08:31 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/sysbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tests</title>
+      <link>https://yauhen.space/tags/tests/</link>
+      <pubDate>Sun, 11 Mar 2018 22:22:44 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/tests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Top</title>
+      <link>https://yauhen.space/tags/top/</link>
+      <pubDate>Thu, 02 Nov 2017 22:14:59 +0100</pubDate>
+      
+      <guid>https://yauhen.space/tags/top/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

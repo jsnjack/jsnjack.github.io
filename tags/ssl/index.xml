@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssl on Notes</title>
+    <link>https://yauhen.space/tags/ssl/</link>
+    <description>Recent content in Ssl on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 22:06:26 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GUI to preview SSL certificates</title>
+      <link>https://yauhen.space/posts/gcr_viewer/</link>
+      <pubDate>Sun, 11 Mar 2018 22:06:26 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/gcr_viewer/</guid>
+      <description>gcr-viewer cert.</description>
+    </item>
+    
+  </channel>
+</rss>

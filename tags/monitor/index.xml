@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitor on Notes</title>
+    <link>https://yauhen.space/tags/monitor/</link>
+    <description>Recent content in Monitor on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/monitor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to monitor amount of data transferred over a specific port</title>
+      <link>https://yauhen.space/posts/how-to-monitor-amount-of-data-transferred-over-a-specific-port/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/how-to-monitor-amount-of-data-transferred-over-a-specific-port/</guid>
+      <description>sudo iftop -i lo -f “port 8015”</description>
+    </item>
+    
+    <item>
+      <title>Monitor process with top</title>
+      <link>https://yauhen.space/posts/monitor_top/</link>
+      <pubDate>Thu, 02 Nov 2017 22:14:59 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/monitor_top/</guid>
+      <description>One liner to monitor a process with the name /wshub:
+top -p &amp;#34;$(pgrep -f /wshub)&amp;#34;</description>
+    </item>
+    
+    <item>
+      <title>Monitor cpu and memory usage of the process</title>
+      <link>https://yauhen.space/posts/periodically_monitor/</link>
+      <pubDate>Fri, 13 Oct 2017 22:17:20 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/periodically_monitor/</guid>
+      <description>Print every second cpu and memory usage of the process:
+watch -n 1 &amp;#34;ps -eo pid,pcpu,pmem,args | kazy -i xnotitle -e kazy&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>

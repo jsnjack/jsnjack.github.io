@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nmap on Notes</title>
+    <link>https://yauhen.space/tags/nmap/</link>
+    <description>Recent content in Nmap on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 22:05:36 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/nmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>List all IP addresses in a network</title>
+      <link>https://yauhen.space/posts/ip_network/</link>
+      <pubDate>Sun, 11 Mar 2018 22:05:36 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/ip_network/</guid>
+      <description>To list ip addresses of all connected to the network devices, use this command:
+nmap -sn 192.</description>
+    </item>
+    
+  </channel>
+</rss>

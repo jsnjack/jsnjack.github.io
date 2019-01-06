@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Notes</title>
+    <link>https://yauhen.space/tags/bash/</link>
+    <description>Recent content in Bash on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Mar 2018 22:11:56 +0100</lastBuildDate>
+    
+	<atom:link href="https://yauhen.space/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What command hides behind alias?</title>
+      <link>https://yauhen.space/posts/what_alias/</link>
+      <pubDate>Sun, 11 Mar 2018 22:11:56 +0100</pubDate>
+      
+      <guid>https://yauhen.space/posts/what_alias/</guid>
+      <description>To check what command is assigned to the alias use type command:
+$ type gl gl is aliased to `git log --oneline&amp;#39;</description>
+    </item>
+    
+  </channel>
+</rss>

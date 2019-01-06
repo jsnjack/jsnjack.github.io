@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Notes</title>
+  <title>Linux &middot; Notes</title>
 
   
 
   
-  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Notes" />
+  <link href="/tags/linux/index.xml" rel="alternate" type="application/rss+xml" title="Notes" />
 
   
   
@@ -101,6 +101,7 @@
             </div>
             <div class="column col-9 col-sm-12 text-left content">
                 
+    <h1 class="list-header">#linux</h1>
     
     
         <div class="post">
@@ -130,79 +131,6 @@
 
     <div>
         <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo iftop -i lo -f “port <span style="color:#ae81ff">8015</span>”</code></pre></div>
-    </div>
-</div>
-
-    
-        <div class="post">
-    <h2>
-        <a href="https://yauhen.space/posts/python_testrunner/">Django-like testrunner for python projects</a>
-    </h2>
-
-    <div class="in-post-summary">
-        
-            
-            
-                <a class="in-post-tag" href="https://yauhen.space/tags/python/">python</a>
-            
-        
-            
-            
-                <a class="in-post-tag" href="https://yauhen.space/tags/django/">django</a>
-            
-        
-            
-            
-                <a class="in-post-tag" href="https://yauhen.space/tags/tests/">tests</a>
-            
-        
-        | 11 Mar 2018
-    </div>
-
-    <div>
-        <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python</span>
-
-<span style="color:#f92672">import</span> <span style="color:#111">argparse</span>
-<span style="color:#f92672">import</span> <span style="color:#111">collections</span>
-<span style="color:#f92672">import</span> <span style="color:#111">unittest</span>
-<span style="color:#f92672">import</span> <span style="color:#111">sys</span>
-
-
-<span style="color:#00a8c8">def</span> <span style="color:#75af00">main</span><span style="color:#111">():</span>
-    <span style="color:#111">parser</span> <span style="color:#f92672">=</span> <span style="color:#111">argparse</span><span style="color:#f92672">.</span><span style="color:#111">ArgumentParser</span><span style="color:#111">(</span><span style="color:#111">description</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;Django-like testrunner&#39;</span><span style="color:#111">)</span>
-    <span style="color:#111">parser</span><span style="color:#f92672">.</span><span style="color:#111">add_argument</span><span style="color:#111">(</span><span style="color:#d88200">&#39;specific_test&#39;</span><span style="color:#111">,</span> <span style="color:#111">metavar</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;&#39;</span><span style="color:#111">,</span> <span style="color:#111">type</span><span style="color:#f92672">=</span><span style="color:#111">str</span><span style="color:#111">,</span> <span style="color:#111">nargs</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#111">help</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;Specifc test&#39;</span><span style="color:#111">)</span>
-    <span style="color:#111">parser</span><span style="color:#f92672">.</span><span style="color:#111">add_argument</span><span style="color:#111">(</span><span style="color:#d88200">&#34;--failfast&#34;</span><span style="color:#111">,</span> <span style="color:#111">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;store_true&#34;</span><span style="color:#111">)</span>
-    <span style="color:#111">parser</span><span style="color:#f92672">.</span><span style="color:#111">add_argument</span><span style="color:#111">(</span><span style="color:#d88200">&#34;--verbosity&#34;</span><span style="color:#111">,</span> <span style="color:#111">type</span><span style="color:#f92672">=</span><span style="color:#111">int</span><span style="color:#111">,</span> <span style="color:#111">default</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-
-    <span style="color:#111">args</span> <span style="color:#f92672">=</span> <span style="color:#111">parser</span><span style="color:#f92672">.</span><span style="color:#111">parse_args</span><span style="color:#111">()</span>
-
-    <span style="color:#111">loader</span> <span style="color:#f92672">=</span> <span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">TestLoader</span><span style="color:#111">()</span>
-    <span style="color:#111">all_tests</span> <span style="color:#f92672">=</span> <span style="color:#111">loader</span><span style="color:#f92672">.</span><span style="color:#111">discover</span><span style="color:#111">(</span><span style="color:#d88200">&#39;.&#39;</span><span style="color:#111">,</span> <span style="color:#111">top_level_dir</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;./&#34;</span><span style="color:#111">)</span>
-    <span style="color:#111">suite</span> <span style="color:#f92672">=</span> <span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">TestSuite</span><span style="color:#111">()</span>
-
-    <span style="color:#00a8c8">if</span> <span style="color:#111">args</span><span style="color:#f92672">.</span><span style="color:#111">specific_test</span><span style="color:#111">:</span>
-
-        <span style="color:#00a8c8">def</span> <span style="color:#75af00">walk_tests</span><span style="color:#111">(</span><span style="color:#111">tests</span><span style="color:#111">):</span>
-            <span style="color:#00a8c8">if</span> <span style="color:#111">isinstance</span><span style="color:#111">(</span><span style="color:#111">tests</span><span style="color:#111">,</span> <span style="color:#111">collections</span><span style="color:#f92672">.</span><span style="color:#111">Iterable</span><span style="color:#111">):</span>
-                <span style="color:#00a8c8">for</span> <span style="color:#111">item</span> <span style="color:#f92672">in</span> <span style="color:#111">tests</span><span style="color:#111">:</span>
-                    <span style="color:#111">walk_tests</span><span style="color:#111">(</span><span style="color:#111">item</span><span style="color:#111">)</span>
-                <span style="color:#00a8c8">return</span>
-            <span style="color:#00a8c8">if</span> <span style="color:#111">tests</span><span style="color:#f92672">.</span><span style="color:#111">id</span><span style="color:#111">()</span><span style="color:#f92672">.</span><span style="color:#111">startswith</span><span style="color:#111">(</span><span style="color:#111">args</span><span style="color:#f92672">.</span><span style="color:#111">specific_test</span><span style="color:#111">):</span>
-                <span style="color:#111">suite</span><span style="color:#f92672">.</span><span style="color:#111">addTest</span><span style="color:#111">(</span><span style="color:#111">tests</span><span style="color:#111">)</span>
-            <span style="color:#00a8c8">elif</span> <span style="color:#f92672">not</span> <span style="color:#111">str</span><span style="color:#111">(</span><span style="color:#111">tests</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">startswith</span><span style="color:#111">(</span><span style="color:#d88200">&#34;test&#34;</span><span style="color:#111">):</span>
-                <span style="color:#111">sys</span><span style="color:#f92672">.</span><span style="color:#111">exit</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Error in file </span><span style="color:#d88200">%s</span><span style="color:#d88200">&#34;</span> <span style="color:#f92672">%</span> <span style="color:#111">tests</span><span style="color:#111">)</span>
-
-        <span style="color:#111">walk_tests</span><span style="color:#111">(</span><span style="color:#111">all_tests</span><span style="color:#111">)</span>
-    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
-        <span style="color:#111">suite</span><span style="color:#f92672">.</span><span style="color:#111">addTests</span><span style="color:#111">(</span><span style="color:#111">all_tests</span><span style="color:#111">)</span>
-
-    <span style="color:#111">result</span> <span style="color:#f92672">=</span> <span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">TextTestRunner</span><span style="color:#111">(</span><span style="color:#111">verbosity</span><span style="color:#f92672">=</span><span style="color:#111">args</span><span style="color:#f92672">.</span><span style="color:#111">verbosity</span><span style="color:#111">,</span> <span style="color:#111">failfast</span><span style="color:#f92672">=</span><span style="color:#111">args</span><span style="color:#f92672">.</span><span style="color:#111">failfast</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">run</span><span style="color:#111">(</span><span style="color:#111">suite</span><span style="color:#111">)</span>
-    <span style="color:#00a8c8">return</span> <span style="color:#111">result</span><span style="color:#f92672">.</span><span style="color:#111">wasSuccessful</span><span style="color:#111">()</span>
-
-
-<span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;__main__&#34;</span><span style="color:#111">:</span>
-    <span style="color:#00a8c8">if</span> <span style="color:#f92672">not</span> <span style="color:#111">main</span><span style="color:#111">():</span>
-        <span style="color:#111">sys</span><span style="color:#f92672">.</span><span style="color:#111">exit</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span></code></pre></div>
     </div>
 </div>
 
@@ -480,6 +408,7 @@ Threads fairness:
 </div>
 
     
+
     <div class="section centered">
         
 

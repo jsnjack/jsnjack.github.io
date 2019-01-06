@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Cpu &middot; Notes</title>
+
+  
+
+  
+  <link href="/tags/cpu/index.xml" rel="alternate" type="application/rss+xml" title="Notes" />
+
+  
+  
+  <link rel="stylesheet" href="/">
+
+  
+
+
+</head>
+<body>
+
+
+<div class="content">
+    <div class="container grid-lg">
+        <div class="columns">
+            <div class="column col-3 hide-sm text-left sidebar">
+                <h1 class="text-center">:Notes</h1>
+
+    
+        <a href="https://yauhen.space/tags/bash/" class="tag" yf-count="1">bash</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/benchmark/" class="tag" yf-count="1">benchmark</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/cpu/" class="tag" yf-count="1">cpu</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/django/" class="tag" yf-count="1">django</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/fedora/" class="tag" yf-count="1">fedora</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/firefox/" class="tag" yf-count="1">firefox</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/flashplayer/" class="tag" yf-count="1">flashplayer</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/linux/" class="tag" yf-count="9">linux</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/monitor/" class="tag" yf-count="3">monitor</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/network/" class="tag" yf-count="2">network</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/nmap/" class="tag" yf-count="1">nmap</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/python/" class="tag" yf-count="1">python</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/ssl/" class="tag" yf-count="1">ssl</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/sysbench/" class="tag" yf-count="1">sysbench</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/tests/" class="tag" yf-count="1">tests</a> |
+    
+
+    
+        <a href="https://yauhen.space/tags/top/" class="tag" yf-count="1">top</a> |
+    
+
+
+
+            </div>
+            <div class="column col-9 col-sm-12 text-left content">
+                
+    <h1 class="list-header">#cpu</h1>
+    
+    
+        <div class="post">
+    <h2>
+        <a href="https://yauhen.space/posts/cpu_benchmark/">CPU benchmark</a>
+    </h2>
+
+    <div class="in-post-summary">
+        
+            
+            
+                <a class="in-post-tag" href="https://yauhen.space/tags/linux/">linux</a>
+            
+        
+            
+            
+                <a class="in-post-tag" href="https://yauhen.space/tags/benchmark/">benchmark</a>
+            
+        
+            
+            
+                <a class="in-post-tag" href="https://yauhen.space/tags/cpu/">cpu</a>
+            
+        
+            
+            
+                <a class="in-post-tag" href="https://yauhen.space/tags/sysbench/">sysbench</a>
+            
+        
+        | 11 Mar 2018
+    </div>
+
+    <div>
+        <p>CPU benchmark from Dell Precision 15 5510 Core-i5 i5-6440HQ</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sysbench cpu run --time<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+sysbench <span style="color:#ae81ff">1</span>.0.9 <span style="color:#f92672">(</span>using system LuaJIT <span style="color:#ae81ff">2</span>.1.0-beta3<span style="color:#f92672">)</span>
+
+Running the <span style="color:#111">test</span> with following options:
+Number of threads: <span style="color:#ae81ff">1</span>
+Initializing random number generator from current <span style="color:#111">time</span>
+
+
+Prime numbers limit: <span style="color:#ae81ff">10000</span>
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  <span style="color:#ae81ff">1157</span>.88
+
+General statistics:
+    total time:                          <span style="color:#ae81ff">5</span>.0008s
+    total number of events:              <span style="color:#ae81ff">5792</span>
+
+Latency <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>:
+         min:                                  <span style="color:#ae81ff">0</span>.80
+         avg:                                  <span style="color:#ae81ff">0</span>.86
+         max:                                  <span style="color:#ae81ff">3</span>.74
+         95th percentile:                      <span style="color:#ae81ff">1</span>.06
+         sum:                               <span style="color:#ae81ff">4998</span>.26
+
+Threads fairness:
+    events <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:           <span style="color:#ae81ff">5792</span>.0000/0.00
+    execution <span style="color:#111">time</span> <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:   <span style="color:#ae81ff">4</span>.9983/0.00</code></pre></div>
+    </div>
+</div>
+
+    
+
+    <div class="section centered">
+        
+
+
+    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
